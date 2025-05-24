@@ -1,8 +1,12 @@
-# geerlingguy's dotfiles
+# Droidforensics' Dotfiles
 
-My configuration. Minimalist, but helps save a few thousand keystrokes a day. I use macOS, so I can only guarantee they'll work on a Mac, but I use some of these dotfiles on various linux servers, and they seem to be pretty flexible.
+I heard a `dotfiles` repo makes me a pro? Jk, I just figured it would be nice to centralize since I'm hopping between different devices and VMs so frequently.
 
-You may also be interested in my [Mac Development Ansible Playbook](https://github.com/geerlingguy/mac-dev-playbook), which configures a Mac from scratch using Ansible, and incorporates the installation and updating of a set of dotfiles like this one.
+Originally forked from [Jeff Geerling](https://github.com/geerlingguy/dotfiles) as I like a lot of his defaults.
+
+Other inspirational sources include:
+
+- To be filled as I re-find other dotfiles I like. :)
 
 ## License
 
