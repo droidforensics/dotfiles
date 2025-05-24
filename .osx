@@ -21,6 +21,7 @@
 # @see: https://github.com/herrbischoff/awesome-macos-command-line
 #
 # @author Jeff Geerling
+# Updates for myself, @droidforensics on GitHub
 
 # Warn that some commands will not be run if the script is not run as root.
 if [[ $EUID -ne 0 ]]; then
@@ -116,7 +117,8 @@ defaults write com.apple.finder ShowMountedServersOnDesktop -bool true
 defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
 
 # Finder: show hidden files by default
-# defaults write com.apple.finder AppleShowAllFiles -bool true
+# Droid4n6: helpful for me, lots of `.config` files and such.
+defaults write com.apple.finder AppleShowAllFiles -bool true
 
 # Finder: show all filename extensions
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
@@ -190,15 +192,23 @@ defaults write com.apple.universalaccess reduceTransparency -bool true
 # 10: Put display to sleep
 # 11: Launchpad
 # 12: Notification Center
+#
+# droid4n6: I don't really use (or like, I guess?) hot corners. Disabling them, but commenting Geerling's defaults.
+#
 # Bottom right screen corner → Mission Control
-defaults write com.apple.dock wvous-br-corner -int 2
-defaults write com.apple.dock wvous-br-modifier -int 0
+#defaults write com.apple.dock wvous-br-corner -int 2
+#defaults write com.apple.dock wvous-br-modifier -int 0
 # Top right screen corner → Put display to sleep
-defaults write com.apple.dock wvous-tr-corner -int 10
-defaults write com.apple.dock wvous-tr-modifier -int 0
+#defaults write com.apple.dock wvous-tr-corner -int 10
+#defaults write com.apple.dock wvous-tr-modifier -int 0
 # Bottom left screen corner → Desktop
-defaults write com.apple.dock wvous-bl-corner -int 4
-defaults write com.apple.dock wvous-bl-modifier -int 0
+#defaults write com.apple.dock wvous-bl-corner -int 4
+#defaults write com.apple.dock wvous-bl-modifier -int 0
+
+defaults write com.apple.dock wvous-br-corner -int 0
+defaults write com.apple.dock wvous-tr-corner -int 0
+defaults write com.apple.dock wvous-bl-corner -int 0
+defaults write com.apple.dock wvous-tl-corner -int 0
 
 ###############################################################################
 # Safari & WebKit                                                             #
@@ -271,4 +281,4 @@ if [[ ! ($* == *--no-restart*) ]]; then
   done
 fi
 
-printf "Please log out and log back in to make all settings take effect.\n"
+printf "Please restart to ensure all changes take effect!\n"
